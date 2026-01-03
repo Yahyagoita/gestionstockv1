@@ -12,4 +12,5 @@ import java.util.List;
 public interface LigneVentesRepository extends JpaRepository<LigneVentes,Integer> {
     List<LigneVentes> findByIdEntreprise(Integer id);
     List<LigneVentes> findAllByVentes(Ventes ventes);
+    List<LigneVentes> findByArticle_IdAndIdEntreprise(Integer idArticle, Integer idEntreprise);
 }

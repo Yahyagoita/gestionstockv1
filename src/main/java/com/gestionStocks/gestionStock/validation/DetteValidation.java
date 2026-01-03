@@ -21,7 +21,7 @@ public class DetteValidation {
         if (dto.getClient() == null){
             errors.add("Veuillez rensegne le l'id du client");
         }
-        if (dto.getMontantRecouvrement() == null){
+        if (dto.getRecouvrement() == null){
             errors.add("Veuillez rensegne le montant du recouvrement");
         }
        return errors;

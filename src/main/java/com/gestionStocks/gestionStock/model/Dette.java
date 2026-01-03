@@ -31,5 +31,5 @@ public class Dette extends AbstractEntity{
 
     @ManyToOne
     @JoinColumn(name = "idVentes")
-    private Ventes Ventes;
+    private Ventes ventes;
 }

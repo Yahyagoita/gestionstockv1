@@ -9,4 +9,6 @@ import java.util.List;
 @Repository
 public interface VentesRepository extends JpaRepository<Ventes,Integer> {
     List<Ventes> findByIdEntreprise(Integer id);
+    List<Ventes> findByClient_Id(Integer id);
+
 }

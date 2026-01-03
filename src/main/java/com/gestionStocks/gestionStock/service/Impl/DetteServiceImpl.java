@@ -71,7 +71,7 @@ public class DetteServiceImpl implements DetteService {
             log.error("l'id du client ou de l'entreprise is null");
             throw new EntityNotFoundException("l'id du client ou de l'entreprise", ErrorCodes.DETTE_NOT_FOUND );
         }
-        return detteRepository.findByIdclientAndIdEntreprise(idClient, idEntre).map(DetteDto::fromEntity).orElseThrow(
+        return detteRepository.findByClient_IdAndIdEntreprise(idClient, idEntre).map(DetteDto::fromEntity).orElseThrow(
                 () -> new EntityNotFoundException("le client est introuvable dans la BDD")
         );
     }

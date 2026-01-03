@@ -112,7 +112,7 @@ public class VentesServiceImpl implements VenteService {
         if (dto.getMontantPaye().abs().compareTo(montantTotal) < 0){
             BigDecimal restant = montantTotal.subtract(dto.getMontantPaye().abs());
 
-            Client clientVerification = clientRepository.findByTel(dto.getTelClient())
+            Client clientVerification = clientRepository.findByTelClient(dto.getTelClient())
                     .orElseGet(() -> {
                         Client client = new Client();
                         client.setNomClient(dto.getNomClient());
@@ -214,7 +214,7 @@ public class VentesServiceImpl implements VenteService {
         if (dto.getMontantPaye().abs().compareTo(montantTotal) < 0){
             BigDecimal restant = montantTotal.subtract(dto.getMontantPaye().abs());
 
-            Client clientVerification = clientRepository.findByTel(dto.getTelClient())
+            Client clientVerification = clientRepository.findByTelClient(dto.getTelClient())
                     .orElseGet(() -> {
                         Client client = new Client();
                         client.setNomClient(dto.getNomClient());

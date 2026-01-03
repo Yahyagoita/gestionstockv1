@@ -13,7 +13,7 @@ import java.util.Optional;
 public interface ArticleRepository extends JpaRepository<Article, Integer> {
     Optional<Article> findByCodeArticleAndIdEntreprise(String code,Integer idEntre);
     Optional<Article> findByNomAndIdEntreprise(String nom,Integer idEntre);
-    List<LigneVentes> findByligneVentes(Integer idArticle, Integer idEntreprise);
+    List<LigneVentes> findByligneVentes_IdAndIdEntreprise(Integer idArticle, Integer idEntreprise);
     List<Article> findAllByIdEntreprise(Integer idEntreprise);
     List<Article> findByIdCategorie_IdAndIdEntreprise(Integer idCategories, Integer idEntreprise);
     Optional<Article> findByNomAndCodeArticleAndIdEntreprise(String nom, String code, Integer idEntreprise);

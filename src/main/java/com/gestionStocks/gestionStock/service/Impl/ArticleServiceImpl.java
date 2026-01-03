@@ -155,7 +155,7 @@ public class ArticleServiceImpl implements ArticleService {
             log.error("l'id is null");
             throw new EntityNotFoundException("l'id est null");
         }
-        return articleRepository.findByligneVentes(idArticle,idEntreprise)
+        return ligneVentesRepository.findByArticle_IdAndIdEntreprise(idArticle,idEntreprise)
                 .stream()
                 .map(LigneVentesDto::fromEntity)
                 .collect(Collectors.toList());
@@ -166,7 +166,7 @@ public class ArticleServiceImpl implements ArticleService {
         if (id == null){
             log.error("L'id is null");
         }
-        List<LigneVentes> lig = articleRepository.findByligneVentes(id,idEntreprise);
+        List<LigneVentes> lig = articleRepository.findByligneVentes_IdAndIdEntreprise(id,idEntreprise);
         if (lig.isEmpty()){
             log.error("la liste est vide");
         }

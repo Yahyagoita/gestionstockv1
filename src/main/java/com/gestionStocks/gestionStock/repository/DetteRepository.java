@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Repository
 public interface DetteRepository extends JpaRepository<Dette,Integer> {
-    Optional<Dette> findByIdclientAndIdEntreprise(Integer idClient, Integer idEntreprise);
+    Optional<Dette> findByClient_IdAndIdEntreprise(Integer idClient, Integer idEntreprise);
     List<Dette> findAllByIdEntreprise(Integer idEntreprise);
     Optional<Ventes> findByVentes(Ventes ventes);
 }
