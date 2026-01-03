@@ -39,7 +39,7 @@ public class ArticleController {
             @ApiResponse(responseCode = "200", description = "Article créé",
                     content = @Content(schema = @Schema(implementation = ArticleDto.class))),
             @ApiResponse(
-                    responseCode = "400", description = "Article invalide"
+                    responseCode = "404", description = "Article invalide"
             )
     })
     public ArticleDto save(@RequestBody ArticleDto dto) {
@@ -57,10 +57,7 @@ public class ArticleController {
                     responseCode = "200", description = "Article modifié",
                     content = @Content(schema = @Schema(implementation = ArticleDto.class))),
             @ApiResponse(
-                    responseCode = "400", description = "Article non valide"
-            ),
-            @ApiResponse(
-                    responseCode = "404", description = "Catégorie non trouvée"
+                    responseCode = "404", description = "Article non valide"
             )
     })
     public ArticleDto update(
