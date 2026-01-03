@@ -1,0 +1,44 @@
+package com.gestionStocks.gestionStock.exception;
+
+public enum ErrorCodes {
+    ARTICLE_NOT_FOUND(1000),
+    ARTICLE_NOT_VALID(1001),
+    ARTICLE_ALREADY_IN_USE(1002),
+
+    CATEGORY_NOT_FOUND(2000),
+    CATEGORY_NOT_VALID(2001),
+    CATEGORY_ALREADY_IN_USE(2002),
+
+    DETTE_NOT_FOUND(3000),
+    DETTE_NOT_VALID(3001),
+    ENTREPRISE_NOT_FOUND(6000),
+    ENTREPRISE_NOT_VALID(6001),
+
+    ROLE_NOT_FOUND(7000),
+    ROLE_NOT_VALID(7001),
+    LIGNE_VENTE_NOT_FOUND(10000),
+
+    MVT_STK_NOT_FOUND(11000),
+    MVT_STK_NOT_VALID(11001),
+
+    UTILISATEUR_NOT_FOUND(12000),
+    UTILISATEUR_NOT_VALID(12001),
+    UTILISATEUR_ALREADY_EXISTS(12002),
+    UTILISATEUR_CHANGE_PASSWORD_OBJECT_NOT_VALID(12003),
+
+    BAD_CREDENTIALS(12003),
+
+    VENTE_NOT_FOUND(13000),
+    VENTE_NOT_VALID(13001),
+    VENTE_ALREADY_IN_USE(13002);
+    private int code;
+
+    ErrorCodes(int code) {
+        this.code = code;
+    }
+
+    public int getCode() {
+        return code;
+    }
+    }
+
